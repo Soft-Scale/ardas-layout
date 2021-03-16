@@ -1,0 +1,145 @@
+// header slider
+.header-swiper{
+  padding-bottom: 60px;
+  // overflow: visible;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets{
+  bottom: 18px;
+  width: 100%;
+}
+.swiper-pagination-bullet{
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #000;
+  height: 12px;
+  width: 12px;
+  opacity: 1;
+  margin: 4px;
+}
+.swiper-pagination-bullet-active{
+  background: #F44336;
+  border: 1px solid #F44336;
+  transform: scale(1);
+}
+.swiper-button-prev,.swiper-button-next{
+  width: 40px;
+  height: 38px;
+  top: 45%;
+  background-image: url('./assets/images/arrow-slider.png');
+
+  &::after{
+    display: none;
+  }
+  @include media-breakpoint-only(xs){
+    display: none;
+  }
+  @include media-breakpoint-down(lg){
+    top: 30%;
+  }
+}
+.swiper-button-next{
+  background-image: url('./assets/images/arrow-slider-next.png');
+  right: 9%;
+  @include media-breakpoint-down(lg){
+    right: 14px;
+  }
+}
+.swiper-button-prev{
+  background-image: url('./assets/images/arrow-slider-prev.png');
+  left: 9%;
+  @include media-breakpoint-down(lg){
+    left: 14px;
+  }
+}
+
+.slide-first{
+  @include media-breakpoint-up(lg) {
+    background-image: url('./assets/images/slider-1.jpg');
+  }
+  @include media-breakpoint-up(sm) {
+    background-image: url('./assets/images/header-bg--tablet.jpg');
+  }
+  @include media-breakpoint-down(sm){
+    background-image: url('./assets/images/header-bg--mobile.jpg');
+  }
+}
+.slide-second{
+  background-image: url('./assets/images/slider-2.jpg');
+}
+.slide-third{
+  background-image: url('./assets/images/slider-3.jpg');
+}
+.img-slider{
+  width: 100vw;
+  position: relative;
+  background-position: center right;
+  background-size: cover;
+  @include media-breakpoint-up(xs){
+    min-height: 350px;
+  }
+  @include media-breakpoint-up(sm){
+    min-height: 214px;
+  }
+  @include media-breakpoint-up(lg){
+    min-height: 400px;
+  }
+}
+.logo-container{
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+
+  
+}
+.logo{
+  position: absolute;
+  bottom: 76px;  
+  left: 18%; 
+  @include media-breakpoint-down(lg){
+    max-width: 170px;
+    bottom:35px;  
+    left: 30px; 
+  }
+  @include media-breakpoint-down(sm){
+    bottom: auto;  
+    left: 23px; 
+    top: 23px;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+// brands slider
+.brand-swiper{
+  padding-bottom: 60px;
+
+  .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 80%;
+  }
+  .swiper-slide--standart,.swiper-slide--comfort{
+    @include media-breakpoint-up(md){
+      width: 30%;
+    }
+  }
+  .swiper-slide--premium{
+    @include media-breakpoint-up(md){
+      width: 36%;
+      margin: 0 2%;
+    }
+  }
+}
